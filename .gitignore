@@ -1,0 +1,15 @@
+# Virtual Environment
+virt/
+
+# Python #
+*.py[cod]
+*$py.class
+__pycache__
+
+# lOG FILES
+*.log
+
+# env files
+.env
+
+.pytest_cache

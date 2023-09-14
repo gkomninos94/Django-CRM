@@ -19,11 +19,13 @@ services:
 
   db:
     image: postgres:15
+    ports:
+      - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=django-crm
+      - POSTGRES_PASSWORD=postgres123
       - POSTGRES_DB=foo
 
 volumes:

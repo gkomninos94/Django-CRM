@@ -13,4 +13,5 @@ __pycache__
 .env
 
 # ssl certificates
-/certs
+*.crt
+*.key

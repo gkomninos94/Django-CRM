@@ -11,3 +11,6 @@ __pycache__
 
 # env files
 .env
+
+# ssl certificates
+/certs

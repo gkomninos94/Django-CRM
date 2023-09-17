@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: django.Dockerfile
-    command: uvicorn dcrm.asgi:application --host 0.0.0.0 --port 8000
+    command: uvicorn dcrm.asgi:application --host 0.0.0.0 --port 8000 --reload
     environment:
       - DB_URL=postgresql://dbuser:pass123@db/foo
     ports:

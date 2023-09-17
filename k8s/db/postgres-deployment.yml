@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: postgres-deployment
+  name: pg-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      component: postgres-deployment
+      component: pg-deployment
       app: db
   template:
     metadata:
       labels:
-        component: postgres-deployment
+        component: pg-deployment
         app: db
     spec:
       volumes:
-        - name:  pg-database-persistent-volume-storage
+        - name: pg-database-persistent-volume-storage
           persistentVolumeClaim:
             claimName: pg-pvc-claim
       containers:
@@ -35,7 +35,7 @@ spec:
                   name: pg-user
                   key: PGPASSWORD
             - name: POSTGRES_DB
-              value: test_db
+              value: foo
           volumeMounts:
             - name: pg-database-persistent-volume-storage
               mountPath: /var/lib/postgresql/data

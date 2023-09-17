@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: django-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: django
+      app: myapi
+  template:
+    metadata:
+      labels:
+        component: django
+        app: myapi
+    spec:
+      containers:
+        - name: django
+          image: 'gioko/mydjango:latest'
+          ports:
+            - containerPort: 8000
+          envFrom:
+            - configMapRef:
+                name: django-config
+          imagePullPolicy: Always
+#      imagePullSecrets:
+#        - name: dockerconfigjson-github-com

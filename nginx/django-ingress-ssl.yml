@@ -1,0 +1,20 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: django-ingress-ssl
+spec:
+  rules:
+  - host: tsadimas.dns-cloud.net
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: django-clip 
+            port: 
+              number: 8000
+  tls:
+    - hosts: 
+      - komninos.cloudns.nz
+      secretName: tls-secret

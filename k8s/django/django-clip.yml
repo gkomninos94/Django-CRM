@@ -5,7 +5,7 @@ metadata:
 spec:
   type: ClusterIP
   selector:
-    component: django-clip
+    component: django
     app: myapi
   ports:
     - port: 8000

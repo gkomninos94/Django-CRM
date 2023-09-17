@@ -10,8 +10,8 @@ __pycache__
 *.log
 
 # env files
-.env
+**.env
 
 # ssl certificates
-*.crt
-*.key
+**.crt
+**.key

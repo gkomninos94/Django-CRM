@@ -15,6 +15,7 @@ docker-compose exec web python manage.py makemigrations
 docker-compose exec web python manage.py migrate
 ```
 * Go to 127.0.0.1:8000 or 20.52.185.205:8000 (VM IP)
+* The application must be running
 
 # Deploy the project to a kubernetes cluster
 
@@ -72,17 +73,3 @@ sudo ufw default allow routed
 kaf k8s/ingress/django-ingress-.yml # for http only
 kaf k8s/ingress/django-ingress-ssl.yml # for https
 ```
-
-## Application overview
-
-![Image of Yaktocat](assets/img/fastapi-lab.png)
-# Links
-* [Control startup and shutdown order in Compose](https://docs.docker.com/compose/startup-order/)
-
-* [Github: create a personla access token for packages](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token)
-
-* [Configure docker to use with github packages](https://docs.github.com/en/packages/guides/configuring-docker-for-use-with-github-packages)
-
-* [create kubernetes secret to access github packages](https://stackoverflow.com/questions/61912589/how-can-i-use-github-packages-docker-registry-in-kubernetes-dockerconfigjson)
-
-* [kubernetes ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/)

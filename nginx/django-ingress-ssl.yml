@@ -4,7 +4,7 @@ metadata:
   name: django-ingress-ssl
 spec:
   rules:
-  - host: tsadimas.dns-cloud.net
+  - host: komninos.cloudns.nz
     http:
       paths:
       - path: /

@@ -1,12 +1,7 @@
 # Run the project locally
 
 ```bash
-docker-compose up --build
-```
-* Type Ctrl-C or just exit the terminal
-```bash
-docker-compose down -v
-docker-compose up -d
+docker-compose up -d --build
 ```
 * Create admin user first
 ```bash

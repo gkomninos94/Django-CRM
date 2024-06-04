@@ -21,7 +21,7 @@ docker-compose exec web python manage.py migrate
 kubectl apply -f k8s/db/postgres-pvc.yml
 ```
 ## configmaps
-### create fastapi configmap
+### create django configmap
 ```bash
 kubectl create configmap django-config --from-env-file=k8s/django/django.env
 ```
@@ -65,6 +65,6 @@ sudo ufw default allow routed
 
 * apply ingress yml file(s)
 ```bash
-kaf k8s/ingress/django-ingress-.yml # for http only
+kaf k8s/ingress/django-ingress.yml # for http only
 kaf k8s/ingress/django-ingress-ssl.yml # for https
 ```
